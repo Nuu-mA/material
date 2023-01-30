@@ -23,3 +23,6 @@ class WaterNotifier extends Notifier<WaterEntity> {
     }
   }
 }
+
+final NotifierProvider<WaterNotifier, WaterEntity> waterNotifierProvider =
+    NotifierProvider<WaterNotifier, WaterEntity>(WaterNotifier.new);

@@ -1,26 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material/view/templates/water/temperature/widget.dart';
+import 'package:material/view_model/water/notifier.dart';
 
-class MaterialMain extends StatelessWidget {
+class MaterialMain extends ConsumerWidget {
   const MaterialMain({super.key});
 
   @override
-  Widget build(Object context) {
+  Widget build(Object context, WidgetRef ref) {
+    final String waterViewSt = ref.watch(waterNotifierProvider).when(
+          solid: () => '氷',
+          liquid: () => '水',
+          gas: () => '水蒸気',
+        );
     return Column(
-      children: const <Widget>[
+      children: <Widget>[
         Expanded(
           flex: 3,
           child: Center(
             child: Text(
-              '水',
-              style: TextStyle(
+              waterViewSt,
+              style: const TextStyle(
                 fontSize: 64,
                 color: Colors.black,
               ),
             ),
           ),
         ),
-        Expanded(
+        const Expanded(
           flex: 1,
           child: SizedBox(
             height: 32,
