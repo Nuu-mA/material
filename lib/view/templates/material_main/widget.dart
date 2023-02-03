@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material/gen/assets.gen.dart';
 import 'package:material/view/templates/water/temperature/widget.dart';
 import 'package:material/view_model/water/notifier.dart';
 
@@ -8,23 +9,17 @@ class MaterialMain extends ConsumerWidget {
 
   @override
   Widget build(Object context, WidgetRef ref) {
-    final String waterViewSt = ref.watch(waterNotifierProvider).when(
-          solid: () => '氷',
-          liquid: () => '水',
-          gas: () => '水蒸気',
+    final String waterImagePath = ref.watch(waterNotifierProvider).when(
+          solid: () => Assets.images.waterSolid.path, // 個体のImagePath
+          liquid: () => Assets.images.waterLiquid.path, // 液体のImagePath
+          gas: () => Assets.images.waterGas.path, // 気体のImagePath
         );
     return Column(
       children: <Widget>[
         Expanded(
           flex: 3,
           child: Center(
-            child: Text(
-              waterViewSt,
-              style: const TextStyle(
-                fontSize: 64,
-                color: Colors.black,
-              ),
-            ),
+            child: Image.asset(waterImagePath),
           ),
         ),
         const Expanded(
