@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$WaterState {
+mixin _$WaterEntity {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() solid,
@@ -63,16 +63,16 @@ mixin _$WaterState {
 }
 
 /// @nodoc
-abstract class $WaterStateCopyWith<$Res> {
-  factory $WaterStateCopyWith(
+abstract class $WaterEntityCopyWith<$Res> {
+  factory $WaterEntityCopyWith(
           WaterEntity value, $Res Function(WaterEntity) then) =
-      _$WaterStateCopyWithImpl<$Res, WaterEntity>;
+      _$WaterEntityCopyWithImpl<$Res, WaterEntity>;
 }
 
 /// @nodoc
-class _$WaterStateCopyWithImpl<$Res, $Val extends WaterEntity>
-    implements $WaterStateCopyWith<$Res> {
-  _$WaterStateCopyWithImpl(this._value, this._then);
+class _$WaterEntityCopyWithImpl<$Res, $Val extends WaterEntity>
+    implements $WaterEntityCopyWith<$Res> {
+  _$WaterEntityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -89,7 +89,7 @@ abstract class _$$_WaterSolidCopyWith<$Res> {
 
 /// @nodoc
 class __$$_WaterSolidCopyWithImpl<$Res>
-    extends _$WaterStateCopyWithImpl<$Res, _$_WaterSolid>
+    extends _$WaterEntityCopyWithImpl<$Res, _$_WaterSolid>
     implements _$$_WaterSolidCopyWith<$Res> {
   __$$_WaterSolidCopyWithImpl(
       _$_WaterSolid _value, $Res Function(_$_WaterSolid) _then)
@@ -103,7 +103,7 @@ class _$_WaterSolid implements _WaterSolid {
 
   @override
   String toString() {
-    return 'WaterState.solid()';
+    return 'WaterEntity.solid()';
   }
 
   @override
@@ -197,7 +197,7 @@ abstract class _$$_WaterLiquidCopyWith<$Res> {
 
 /// @nodoc
 class __$$_WaterLiquidCopyWithImpl<$Res>
-    extends _$WaterStateCopyWithImpl<$Res, _$_WaterLiquid>
+    extends _$WaterEntityCopyWithImpl<$Res, _$_WaterLiquid>
     implements _$$_WaterLiquidCopyWith<$Res> {
   __$$_WaterLiquidCopyWithImpl(
       _$_WaterLiquid _value, $Res Function(_$_WaterLiquid) _then)
@@ -211,7 +211,7 @@ class _$_WaterLiquid implements _WaterLiquid {
 
   @override
   String toString() {
-    return 'WaterState.liquid()';
+    return 'WaterEntity.liquid()';
   }
 
   @override
@@ -305,7 +305,7 @@ abstract class _$$_WaterGasCopyWith<$Res> {
 
 /// @nodoc
 class __$$_WaterGasCopyWithImpl<$Res>
-    extends _$WaterStateCopyWithImpl<$Res, _$_WaterGas>
+    extends _$WaterEntityCopyWithImpl<$Res, _$_WaterGas>
     implements _$$_WaterGasCopyWith<$Res> {
   __$$_WaterGasCopyWithImpl(
       _$_WaterGas _value, $Res Function(_$_WaterGas) _then)
@@ -319,7 +319,7 @@ class _$_WaterGas implements _WaterGas {
 
   @override
   String toString() {
-    return 'WaterState.gas()';
+    return 'WaterEntity.gas()';
   }
 
   @override
