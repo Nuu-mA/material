@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material/gen/assets.gen.dart';
+import 'package:material/view/templates/water/degrees_celsius/widget.dart';
 import 'package:material/view/templates/water/temperature/widget.dart';
 import 'package:material/view_model/water/notifier.dart';
 
@@ -22,11 +23,16 @@ class MaterialMain extends ConsumerWidget {
             child: Image.asset(waterImagePath),
           ),
         ),
-        const Expanded(
+        Expanded(
           flex: 1,
           child: SizedBox(
             height: 32,
-            child: Temperature(),
+            child: Row(
+              children: <Widget>[
+                Temperature(),
+                // DegreesCelsius(temperature: temperature)
+              ],
+            ),
           ),
         ),
       ],
