@@ -32,6 +32,7 @@ class MaterialMain extends ConsumerWidget {
           child: SizedBox(
             height: 16,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 DegreesCelsius(temperature: '${temperatureState.temperature}'),
                 const Temperature(),
