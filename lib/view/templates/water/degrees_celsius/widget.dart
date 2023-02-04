@@ -1,5 +1,4 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_html/flutter_html.dart';
 
 class DegreesCelsius extends StatelessWidget {
   const DegreesCelsius({
@@ -10,11 +9,21 @@ class DegreesCelsius extends StatelessWidget {
   final String _temperature;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Text(_temperature),
-        Html(data: '&#8451;'),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            _temperature,
+            style: const TextStyle(fontSize: 32),
+          ),
+          Text(
+            String.fromCharCode(8451),
+            style: const TextStyle(fontSize: 32),
+          ) // セルシウス度表記
+        ],
+      ),
     );
   }
 }

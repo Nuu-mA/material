@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$TemperatureEntity {
-  double get temperature => throw _privateConstructorUsedError;
+  int get temperature => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TemperatureEntityCopyWith<TemperatureEntity> get copyWith =>
@@ -29,7 +29,7 @@ abstract class $TemperatureEntityCopyWith<$Res> {
           TemperatureEntity value, $Res Function(TemperatureEntity) then) =
       _$TemperatureEntityCopyWithImpl<$Res, TemperatureEntity>;
   @useResult
-  $Res call({double temperature});
+  $Res call({int temperature});
 }
 
 /// @nodoc
@@ -51,7 +51,7 @@ class _$TemperatureEntityCopyWithImpl<$Res, $Val extends TemperatureEntity>
       temperature: null == temperature
           ? _value.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
     ) as $Val);
   }
 }
@@ -64,7 +64,7 @@ abstract class _$$_TemperatureStateCopyWith<$Res>
       __$$_TemperatureStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double temperature});
+  $Res call({int temperature});
 }
 
 /// @nodoc
@@ -84,7 +84,7 @@ class __$$_TemperatureStateCopyWithImpl<$Res>
       temperature: null == temperature
           ? _value.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
     ));
   }
 }
@@ -95,7 +95,7 @@ class _$_TemperatureState implements _TemperatureState {
   const _$_TemperatureState({required this.temperature});
 
   @override
-  final double temperature;
+  final int temperature;
 
   @override
   String toString() {
@@ -122,11 +122,11 @@ class _$_TemperatureState implements _TemperatureState {
 }
 
 abstract class _TemperatureState implements TemperatureEntity {
-  const factory _TemperatureState({required final double temperature}) =
+  const factory _TemperatureState({required final int temperature}) =
       _$_TemperatureState;
 
   @override
-  double get temperature;
+  int get temperature;
   @override
   @JsonKey(ignore: true)
   _$$_TemperatureStateCopyWith<_$_TemperatureState> get copyWith =>

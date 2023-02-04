@@ -4,6 +4,6 @@ part 'entity.freezed.dart';
 
 @freezed
 class TemperatureEntity with _$TemperatureEntity {
-  const factory TemperatureEntity({required final double temperature}) =
+  const factory TemperatureEntity({required final int temperature}) =
       _TemperatureState;
 }
