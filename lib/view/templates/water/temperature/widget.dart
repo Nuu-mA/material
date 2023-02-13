@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:material/view_model/temperature/notifier.dart';
+import 'package:material/view_model/water/notifier.dart';
 
 class Temperature extends ConsumerWidget {
   const Temperature({super.key});

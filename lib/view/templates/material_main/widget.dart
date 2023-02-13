@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material/gen/assets.gen.dart';
 import 'package:material/view/templates/water/degrees_celsius/widget.dart';
 import 'package:material/view/templates/water/temperature/widget.dart';
-import 'package:material/view_model/temperature/notifier.dart';
+import 'package:material/view_model/water/notifier.dart';
 
 class MaterialMain extends ConsumerWidget {
   const MaterialMain({super.key});
