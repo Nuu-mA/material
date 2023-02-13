@@ -31,7 +31,7 @@ class MaterialMain extends ConsumerWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                DegreesCelsius(temperature: '$temperatureValue'),
+                DegreesCelsius(temperature: '${temperatureValue.ceil()}'),
                 const Temperature(),
               ],
             ),

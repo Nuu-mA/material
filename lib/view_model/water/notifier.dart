@@ -2,12 +2,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material/domain/entity/water/entity.dart';
 
 final temperatureProvider = StateProvider<double>(
-  (ref) => 0,
+  (ref) => 0.0,
 );
 
 final waterEntityProvider = Provider<WaterEntity>(
   (ref) {
-    final temperature = ref.watch(temperatureProvider);
+    // 温度情報の状態変化をWatchする
+    final double temperature = ref.watch(temperatureProvider);
     if (temperature < 0.0) {
       // 0度未満の場合は個体
       return const WaterEntity.solid();
