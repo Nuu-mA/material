@@ -15,7 +15,7 @@ class MaterialMain extends ConsumerWidget {
           liquid: () => Assets.images.waterLiquid.path, // 液体のImagePath
           gas: () => Assets.images.waterGas.path, // 気体のImagePath
         );
-    final double temperatureValue = ref.watch(temperatureProvider);
+    final double temperatureValue = ref.watch(temperatureSateProvider);
     return Column(
       children: <Widget>[
         Expanded(

@@ -13,10 +13,10 @@ class Temperature extends ConsumerWidget {
         divisions: 22,
         max: 120.0, // 最大温度
         min: -100.0, // 最低温度
-        value: ref.watch(temperatureProvider),
+        value: ref.watch(temperatureSateProvider),
         onChanged: (value) {
           // 温度の更新
-          ref.watch(temperatureProvider.notifier).update(
+          ref.watch(temperatureSateProvider.notifier).update(
                 (state) => value,
               );
         },
