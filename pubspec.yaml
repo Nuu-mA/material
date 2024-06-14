@@ -1,10 +1,11 @@
 name: material
 description: A new Flutter project.
 publish_to: "none"
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
 
 dependencies:
   cupertino_icons: ^1.0.5
